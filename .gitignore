@@ -1,0 +1,5 @@
+# Ignorar dependencias en cualquier subcarpeta
+**/node_modules
+**/dist
+**/.env
+.DS_Store

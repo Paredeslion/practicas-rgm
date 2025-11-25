@@ -1,0 +1,123 @@
+/* Estilos básicos para que se vea limpio */
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+}
+h1,
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* La lista de monstruos */
+.monster-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+/* Tarjeta de Monstruo */
+.monster-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.monster-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+.monster-card h3 {
+  margin: 10px 0 5px;
+}
+.type-badge {
+  background: #eee;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+.delete-btn {
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.delete-btn:hover {
+  background: #cc0000;
+}
+
+/* El Formulario */
+.add-form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+  margin-bottom: 15px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Previsualización de imagen */
+#preview {
+  display: block;
+  margin-top: 10px;
+  max-width: 100px;
+  max-height: 100px;
+  border: 1px dashed #ccc;
+}
+
+/* Clases de utilidad */
+.hidden {
+  display: none !important;
+}
+.full-width-btn {
+  width: 100%;
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.full-width-btn:hover {
+  background: #45a049;
+}
+
+/* Aviso de equipo lleno */
+#limit-message {
+  background: #fff3cd;
+  color: #856404;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: 1px solid #ffeeba;
+}

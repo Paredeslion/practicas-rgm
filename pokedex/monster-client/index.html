@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Pokedex Personal</title>
+    <script type="module" src="/src/index.ts"></script>
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+  <body>
+    <h1>⚡ Mi Equipo de Combate ⚡</h1>
+
+    <ul class="monster-list" id="monster-list"></ul>
+
+    <div id="limit-message" class="hidden">
+      ⚠️ Tu equipo está completo (6/6). ¡Elimina uno para añadir más!
+    </div>
+
+    <form class="add-form" id="add-form">
+      <h2>Añadir Nuevo Miembro</h2>
+
+      <div class="form-group">
+        <label for="name">Nombre:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Ej: Pikachu"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="type">Tipo:</label>
+        <select id="type" name="type" required>
+          <option value="">Selecciona un tipo...</option>
+          <option value="Fuego">🔥 Fuego</option>
+          <option value="Agua">💧 Agua</option>
+          <option value="Planta">🍃 Planta</option>
+          <option value="Eléctrico">⚡ Eléctrico</option>
+          <option value="Normal">⚪ Normal</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="photo">Foto:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required />
+        <img id="preview" src="" alt="Preview" class="hidden" />
+      </div>
+
+      <button type="submit" class="full-width-btn">Añadir al Equipo</button>
+    </form>
+
+    <template id="monster-card-template">
+      <li class="monster-card">
+        <img src="" alt="Monster Image" class="monster-img" />
+        <h3 class="monster-name">Nombre</h3>
+        <span class="type-badge">Tipo</span>
+        <button class="delete-btn">Liberar</button>
+      </li>
+    </template>
+  </body>
+</html>
